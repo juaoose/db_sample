@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "streamers": {
+      ".indexOn": ["activeSessionId"],
+      ".read": "query.orderByChild == 'activeSessionId' && query.startAt == '\u0000' && query.endAt == '\uFFFF'",
+      ".write": false,
+      "$userId": {
+        ".read": true,
+        ".write": false
+      }
+    }
+  }
+}
